@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960" height="960" viewBox="0 0 960 960" fill="none">
+<rect  x="0" y="265" width="450" height="185" rx="92.5"    fill="#FFBE26" >
+</rect>
+<circle cx="357.5" cy="92.5" r="92.5"   fill="#FF6666" >
+</circle>
+<circle cx="602.5" cy="867.5" r="92.5"   fill="#84F073" >
+</circle>
+<circle cx="92.5" cy="602.5" r="92.5"   fill="#9D2AFA" >
+</circle>
+<circle cx="867.5" cy="357.5" r="92.5"   fill="#FFBE26" >
+</circle>
+<rect  x="510" y="510" width="450" height="185" rx="92.5"    fill="#9D2AFA" >
+</rect>
+<rect  x="265" y="960" width="450" height="185" transform="rotate(-90 265 960)" rx="92.5"    fill="#FF6666" >
+</rect>
+<rect  x="510" y="450" width="450" height="185" transform="rotate(-90 510 450)" rx="92.5"    fill="#84F073" >
+</rect>
+</svg>

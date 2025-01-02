@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">#010101</item>
+        <item name="android:colorPrimaryDark">#010101</item>
+        <item name="android:navigationBarColor">#010101</item>
+    </style>
+
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">#010101</item>
+        <item name="android:colorPrimaryDark">#010101</item>
+        <item name="android:navigationBarColor">#010101</item>
+    </style>
+</resources>
