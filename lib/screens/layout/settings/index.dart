@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:usemain/providers/config.dart';
-import 'package:usemain/screens/settings/header.dart';
-import 'package:usemain/screens/settings/menus.dart';
+import 'package:usemain/screens/layout/settings/header.dart';
+import 'package:usemain/screens/layout/settings/menus.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});

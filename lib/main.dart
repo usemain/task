@@ -47,6 +47,10 @@ class _MainPageState extends State<MainPage> {
             locale: const Locale('zh', 'CH'),
             debugShowCheckedModeBanner: false,
             themeAnimationDuration: Duration.zero,
+            themeAnimationStyle: AnimationStyle(
+              curve: Curves.linear,
+              duration: Duration.zero,
+            ),
             scrollBehavior: CustomScrollBehavior(),
             supportedLocales: const [
               Locale('zh', 'CH'),

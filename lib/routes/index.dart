@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:usemain/screens/language/index.dart';
-import 'package:usemain/screens/settings/index.dart';
 import 'package:usemain/screens/layout/index.dart';
 import 'package:usemain/screens/task_record/index.dart';
 
@@ -8,7 +7,6 @@ final Map<String, WidgetBuilder> routeBuilders = {
   '/': (context) => const LayoutScreen(),
   '/TaskRecord': (context) => const TaskRecordScreen(),
   '/Language': (context) => const LanguageScreen(),
-  '/Settings': (context) => const SettingsScreen(),
 };
 
 Route<dynamic> routes(RouteSettings settings) {

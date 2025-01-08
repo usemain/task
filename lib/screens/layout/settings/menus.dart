@@ -38,7 +38,9 @@ class MenuItem extends StatelessWidget {
               Expanded(
                 child: Text(
                   title,
-                  style: TextStyle(fontSize: 16),
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
                 ),
               ),
               Icon(
@@ -85,7 +87,9 @@ class MenuSwitchItem extends StatelessWidget {
             Expanded(
               child: Text(
                 title,
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(
+                  fontSize: 16,
+                ),
               ),
             ),
             CustomSwitch(

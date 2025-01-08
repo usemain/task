@@ -3,16 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:usemain/providers/config.dart';
 import 'package:usemain/screens/layout/appbar.dart';
+import 'package:usemain/screens/layout/data/index.dart';
+import 'package:usemain/screens/layout/settings/index.dart';
 import 'package:usemain/screens/layout/task/index.dart';
 import 'package:usemain/screens/layout/home/index.dart';
 import 'package:usemain/shares/native.dart';
 
-final List<Widget> tabBarScreens = [
+final List<Widget> layoutScreens = [
   const HomeScreen(),
   const TaskScreen(),
+  const DataScreen(),
+  const SettingsScreen()
 ];
 
-List<String> tabBarLabels = ['发现', '任务', '统计', '设置'];
+List<String> layoutLabels = ['发现', '任务', '数据', '设置'];
 
 class LayoutScreen extends StatefulWidget {
   const LayoutScreen({super.key});
@@ -23,7 +27,6 @@ class LayoutScreen extends StatefulWidget {
 
 class _LayoutScreenState extends State<LayoutScreen> {
   int currentIndex = 0;
-  String tabBarLabel = tabBarLabels[0];
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +50,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
         ),
         body: IndexedStack(
           index: currentIndex,
-          children: tabBarScreens,
+          children: layoutScreens,
         ),
       ),
     );
@@ -55,26 +58,23 @@ class _LayoutScreenState extends State<LayoutScreen> {
 
   Widget buildCustomNavigationBar(ConfigProvider configProvider) {
     Color selectColor = configProvider.isLight ? Colors.black : Colors.white;
-
     return Container(
       padding: EdgeInsets.only(
         bottom: MediaQuery.of(context).padding.bottom,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: tabBarLabels.map((label) {
-          final index = tabBarLabels.indexOf(label);
-          final isSelected = index == currentIndex;
+        children: layoutLabels.map((label) {
+          final index = layoutLabels.indexOf(label);
           return GestureDetector(
             behavior: HitTestBehavior.opaque,
             onTap: () {
               setState(() {
                 currentIndex = index;
-                tabBarLabel = tabBarLabels[index];
               });
             },
             child: Container(
-              width: MediaQuery.of(context).size.width * 0.4,
+              width: MediaQuery.of(context).size.width * 0.25,
               alignment: Alignment.center,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -83,16 +83,18 @@ class _LayoutScreenState extends State<LayoutScreen> {
                     label,
                     style: TextStyle(
                       fontSize: 16,
-                      color: isSelected ? selectColor : Colors.grey,
+                      color: index == currentIndex ? selectColor : Colors.grey,
                     ),
                   ),
                   const SizedBox(height: 3),
                   Container(
-                    height: 2,
                     width: 30,
+                    height: 2,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(1),
-                      color: isSelected ? selectColor : Colors.transparent,
+                      color: index == currentIndex
+                          ? selectColor
+                          : Colors.transparent,
                     ),
                   ),
                 ],
