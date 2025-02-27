@@ -1,0 +1,2 @@
+/Users/yu/Downloads/usemain_flutter/android/app/.cxx/RelWithDebInfo/6ka2a455/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/yu/Downloads/usemain_flutter/android/app/.cxx/RelWithDebInfo/6ka2a455/arm64-v8a/CMakeFiles/rebuild_cache.dir

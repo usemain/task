@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import io.flutter.embedding.android.FlutterFragmentActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
+import io.flutter.embedding.android.FlutterActivityLaunchConfigs.BackgroundMode
 
 class MainActivity : FlutterFragmentActivity() {
     private val channel = "usemain/backChannel"
@@ -27,5 +28,9 @@ class MainActivity : FlutterFragmentActivity() {
                 result.notImplemented()
             }
         }
+    }
+
+    override fun getBackgroundMode(): BackgroundMode {
+        return BackgroundMode.transparent
     }
 }
